@@ -23,8 +23,8 @@ module.exports = {
       include: path.join(__dirname, 'src')
     },
     {
-        test: /\.less$/,
-        loader: "style!css!less"
+      test: /\.scss$/,
+      loader: "style!css!sass"
     }]
   },
   resolve: {
