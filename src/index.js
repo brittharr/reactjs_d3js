@@ -1,7 +1,8 @@
 var React = require('react'),
     _ = require('lodash'),
     d3 = require('d3'),
-    drawers = require('./drawers.jsx');
+    drawers = require('./drawers.jsx'),
+    css = require('./style.scss');
 
 var H1BGraph = React.createClass({
     componentWillMount: function() {
@@ -35,7 +36,6 @@ var H1BGraph = React.createClass({
                 console.error(error);
                 console.error(error.stack);
           } else {
-                console.log(rows);
                 this.setState({ rawData: rows });
           }
       }.bind(this));
@@ -52,7 +52,7 @@ var H1BGraph = React.createClass({
                 bins: 20,
                 width: 500,
                 height: 500,
-                axismargin: 83,
+                axisMargin: 83,
                 topMargin: 10,
                 bottomMargin: 5,
                 value: function(d) { return d.base_salary; }
