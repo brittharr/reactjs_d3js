@@ -1,5 +1,5 @@
 var React = require('react'),
-       d3 = require('d3');
+    d3 = require('d3');
 
 var Histogram = React.createClass({
     componentWillMount: function() {
